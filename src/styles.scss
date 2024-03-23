@@ -1,1 +1,21 @@
-/* You can add global styles to this file, and also import other style files */
+// fonts
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+// icons
+@import url("https://fonts.googleapis.com/css?family=Material+Icons+Outlined|Material+Icons");
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-family: "Inter", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.has-blured-bg {
+  background: rgba(white, 0.85);
+  backdrop-filter: blur(20px);
+}

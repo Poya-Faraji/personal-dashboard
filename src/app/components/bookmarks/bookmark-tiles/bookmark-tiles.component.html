@@ -1,0 +1,8 @@
+<ng-container *ngIf="bookmark">
+  <a [href]="bookmark.url">
+    <div class="bookmark-tile">
+      <div class="icon"><img [src]="bookmarkFavIcon" alt="🤔" /></div>
+      <p>{{ bookmark.name }}</p>
+    </div>
+  </a>
+</ng-container>

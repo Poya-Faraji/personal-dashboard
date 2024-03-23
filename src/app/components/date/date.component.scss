@@ -1,0 +1,19 @@
+.top-section {
+  text-align: center;
+  padding: 80px 0 50px 0;
+
+  .time {
+    font-weight: bold;
+    font-size: 4.3em;
+  }
+
+  .date {
+    font-size: 1.3em;
+  }
+
+  .time,
+  .date {
+    text-shadow: 2px 5px 6px rgba(0, 0, 0, 0.6);
+    color: white;
+  }
+}

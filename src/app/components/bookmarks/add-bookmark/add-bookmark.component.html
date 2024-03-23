@@ -1,0 +1,28 @@
+<div class="bookmark-wrapper has-blured-bg container">
+  <h2>Add New Bookmark</h2>
+  <form #form="ngForm" (submit)="onFormSubmit(form)">
+    <label for="title">Name:</label>
+    <input
+      ngModel
+      class="text-box"
+      name="title"
+      type="text"
+      placeholder="Bookmark name here..."
+    />
+    <label for="url">Url:</label>
+
+    <input
+      ngModel
+      class="text-box"
+      name="url"
+      type="text"
+      placeholder="e.g https://wikipedia.org"
+      required
+    />
+
+    <div class="d-flex">
+      <a routerLink="../" class="btn">Cancel</a>
+      <button type="submit" class="btn align-end">Create</button>
+    </div>
+  </form>
+</div>

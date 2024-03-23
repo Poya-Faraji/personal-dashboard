@@ -1,0 +1,13 @@
+<div class="manage-bookmarks-wrapper">
+  <div class="sidebar">
+    <p class="sidebar-heading">Your Bookmarks</p>
+    <div class="sidebar-item">
+      <a class="siderbar-item-link" [routerLink]="[bookmark.id]" routerLinkActive="selected" *ngFor="let bookmark of bookmarks">{{
+        bookmark.name
+      }}</a>
+    </div>
+  </div>
+  <div class="content has-blured-background">
+    <router-outlet></router-outlet>
+  </div>
+</div>

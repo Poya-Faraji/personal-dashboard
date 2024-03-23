@@ -1,0 +1,20 @@
+<div class="bookmarks-wrapper">
+  <div class="container">
+    <div class="tiles-container">
+      <!-- Component here -->
+      <ng-container *ngFor="let bookmark of bookmarks">
+        <app-bookmark-tiles [bookmark]="bookmark"></app-bookmark-tiles>
+      </ng-container>
+    </div>
+    <div class="btns-sm-container btns-centered">
+      <a class="btn" routerLink="add">
+        <i class="material-icons-outlined">add</i>Add
+      </a>
+
+      <a class="btn" routerLink="manage">
+        <i class="material-icons-outlined">settings</i>Manage
+      </a>
+    </div>
+  </div>
+</div>
+`

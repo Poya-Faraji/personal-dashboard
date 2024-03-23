@@ -1,0 +1,18 @@
+<ng-container *ngIf="todo">
+  <div class="todo-item" [class.completed]="todo.isComplete">
+    <div class="check-box">
+      <i class="material-icons-outlined">check</i>
+    </div>
+
+    <p>{{ todo.content }}</p>
+
+    <div class="todo-item-btn-container" (click)="$event.stopPropagation()">
+      <div class="btn first" [routerLink]="'edit/' + todo.id">
+        <i class="material-icons-outlined">edit</i>
+      </div>
+      <div class="btn last" (click)="onDeleteClicked()">
+        <i class="material-icons">delete</i>
+      </div>
+    </div>
+  </div>
+</ng-container>

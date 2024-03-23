@@ -1,0 +1,27 @@
+<div class="edit-note-wrapper has-blured-bg container">
+  <h2>Edit Note</h2>
+  <form #form="ngForm" (ngSubmit)="onFormSubmit(form)">
+    <input
+      [ngModel]="note?.title"
+      class="text-box"
+      name="title"
+      type="text"
+      placeholder="Enter note title here..."
+      required
+    />
+    <textarea
+      [ngModel]="note?.content"
+      class="text-area"
+      name="content"
+      placeholder="Enter note here..."
+    ></textarea>
+
+    <div class="d-flex">
+      <a routerLink="../" class="btn">Cancel</a>
+      <button type="button" class="btn align-end" (click)="deleteNote()">
+        Delete
+      </button>
+      <button type="submit" class="btn create-btn">Save</button>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,34 @@
+<div class="edit-bookmark-wrappr">
+  <ng-container *ngIf="bookmark">
+    <h2 class="align-center">{{ bookmark.name }}</h2>
+    <form #form="ngForm" (submit)="onFormSubmit(form)">
+      <div>
+        <label for="title">Name:</label>
+        <input
+          [(ngModel)]="bookmark.name"
+          class="text-box"
+          name="title"
+          type="text"
+          placeholder="Bookmark name here..."
+        />
+      </div>
+      <div>
+        <label for="url">Url:</label>
+        <input
+          [(ngModel)]="bookmark.url"
+          class="text-box"
+          name="url"
+          type="text"
+          placeholder="e.g https://wikipedia.org"
+          required
+        />
+      </div>
+
+      <div class="form-buttons">
+        <a routerLink="../../" class="btn">Cancel</a>
+        <a (click)="onClickDeleteBookmark()"  routerLink="../" class="btn">Delete</a>
+        <button type="submit" class="btn align-end">Save</button>
+      </div>
+    </form>
+  </ng-container>
+</div>
