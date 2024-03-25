@@ -1,0 +1,19 @@
+{
+  "notes": [
+    {
+      "title": "Added Json-Server",
+      "content": "Make sure to run server before you ng serve project",
+      "id": "adae466e-7a0e-4c75-b1d0-75b3d5dbfc9e"
+    },
+    {
+      "title": "Refresh is not a problem anymore",
+      "content": "At least for notes they are not problem anymore we have local server \nAnd I didnt wanted to use localStorage for safety of Data and \nLocal Json-Server and Http request and RxJS observable are more fun 😎",
+      "id": "15b43ec7-312c-4d29-8746-3dec837944fd"
+    },
+    {
+      "title": "Make sure to give me a start",
+      "content": "I put alot of effor in Learning and Developing my angular skills, So I guess for that reason I can get a star 🤩.",
+      "id": "d7fac163-4155-4e38-853d-2fb0287ed96a"
+    }
+  ]
+}

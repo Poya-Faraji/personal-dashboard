@@ -3,6 +3,7 @@ import { NgForm } from '@angular/forms';
 import { Note } from '../../../shared/note';
 import { NoteService } from '../../../shared/note.service';
 import { Router } from '@angular/router';
+import { note } from '../../../shared/note.interface';
 
 @Component({
   selector: 'app-add-notes',
@@ -14,8 +15,14 @@ export class AddNotesComponent {
 
   onFormSubmit(form: NgForm) {
     if (form.invalid) return alert('Title is required');
-    const note = new Note(form.value.title, form.value.content);
-    this.noteService.addNote(note);
-    this.router.navigateByUrl('/notes');
+    const note: note = new Note(form.value.title, form.value.content);
+    this.noteService.addNote(note).subscribe({
+      next: () => {
+        this.router.navigateByUrl('/notes');
+      },
+      error: (err) => {
+        console.log('Failed to add to notes!', err);
+      },
+    });
   }
 }

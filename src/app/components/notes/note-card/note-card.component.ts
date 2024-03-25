@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Note } from '../../../shared/note';
+import { note } from '../../../shared/note.interface';
 
 @Component({
   selector: 'app-note-card',
@@ -7,5 +7,5 @@ import { Note } from '../../../shared/note';
   styleUrl: './note-card.component.scss',
 })
 export class NoteCardComponent {
-  @Input() note: Note | null = null;
+  @Input() note: note | null = null;
 }

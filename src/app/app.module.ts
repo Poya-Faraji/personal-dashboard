@@ -18,6 +18,7 @@ import { EditTodoComponent } from './components/todos/edit-todo/edit-todo.compon
 import { AddBookmarkComponent } from './components/bookmarks/add-bookmark/add-bookmark.component';
 import { ManageBookmarkComponent } from './components/bookmarks/manage-bookmark/manage-bookmark.component';
 import { EditBookmarkComponent } from './components/bookmarks/edit-bookmark/edit-bookmark.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,7 @@ import { EditBookmarkComponent } from './components/bookmarks/edit-bookmark/edit
     ManageBookmarkComponent,
     EditBookmarkComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
 })
