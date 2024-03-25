@@ -1,45 +1,33 @@
 import { Injectable } from '@angular/core';
 import { Todo } from './todos';
+import { HttpClient } from '@angular/common/http';
+import { todo } from './todo.inteface';
 
 @Injectable({
   providedIn: 'root',
 })
 export class TodosService {
-  constructor() {}
-
-  todos: Todo[] = [
-    new Todo('This is Test'),
-    new Todo(
-      'This is Also a Test but 2 This is Also a Test but 2This is Also a Test but 2This is Also a Test but 2This is Also a Test but 2'
-    ),
-  ];
+  constructor(private http: HttpClient) {}
+  private todoUrl = 'http://localhost:3000/todos';
 
   getTodos() {
-    return this.todos;
+    return this.http.get<todo[]>(this.todoUrl);
   }
 
-  // accessing each one
   getTodo(id: string | null) {
-    return this.todos.find((n) => n.id === id);
+    return this.http.get<todo>(`${this.todoUrl}/${id}`);
   }
 
-  // adding to Todo List
   addTodo(todo: string) {
     const newTodo = new Todo(todo);
-    this.todos.push(newTodo);
+    return this.http.post(`${this.todoUrl}`, newTodo);
   }
 
-  updateTodo(id: string | null, updatedTodoField: Partial<Todo>) {
-    const todo = this.getTodo(id);
-    if (todo) {
-      Object.assign(todo, updatedTodoField);
-    } else {
-      console.error("'todo' value is unknown!");
-    }
+  updateTodo(id: string | null, updatedTodo: todo) {
+    return this.http.put(`${this.todoUrl}/${id}`, updatedTodo);
   }
 
   deleteTodo(id: string) {
-    const todoIndex = this.todos.findIndex((n) => n.id === id);
-    this.todos.splice(todoIndex, 1);
+    return this.http.delete(`${this.todoUrl}/${id}`);
   }
 }

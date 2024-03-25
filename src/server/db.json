@@ -15,5 +15,22 @@
       "content": "I put alot of effor in Learning and Developing my angular skills, So I guess for that reason I can get a star 🤩.",
       "id": "d7fac163-4155-4e38-853d-2fb0287ed96a"
     }
+  ],
+  "todos": [
+    {
+      "content": "Click on +Add to Create New Todo",
+      "id": "1a2cf2a2-8db8-47d2-8ac8-b029394b2fde",
+      "isComplete": false
+    },
+    {
+      "content": "Star this repo ⭐",
+      "id": "896b4481-d10f-46f0-994a-a0d624dc7087",
+      "isComplete": false
+    },
+    {
+      "content": "Enjoy Using this ...",
+      "id": "8fd0db09-3317-42f5-b9cb-378db3c3c418",
+      "isComplete": false
+    }
   ]
 }

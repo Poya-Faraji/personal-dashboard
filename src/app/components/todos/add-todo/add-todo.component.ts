@@ -14,7 +14,13 @@ export class AddTodoComponent {
   onFormSubmit(form: NgForm) {
     if (form.invalid) return alert('Todo Can not be empty !');
 
-    this.todoService.addTodo(form.value.content);
-    this.router.navigateByUrl('/todos');
+    this.todoService.addTodo(form.value.content).subscribe({
+      next: () => {
+        this.router.navigateByUrl('/todos');
+      },
+      error: (err) => {
+        console.log('Failed Adding Todo: ', err);
+      },
+    });
   }
 }

@@ -3,6 +3,7 @@ import { NgForm } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Todo } from '../../../shared/todos';
 import { TodosService } from '../../../shared/todos.service';
+import { todo } from '../../../shared/todo.inteface';
 
 @Component({
   selector: 'app-edit-todo',
@@ -10,22 +11,35 @@ import { TodosService } from '../../../shared/todos.service';
   styleUrl: './edit-todo.component.scss',
 })
 export class EditTodoComponent implements OnInit {
-  todo: Todo | undefined;
+  id: string | null = this.route.snapshot.paramMap.get('id');
+
+  newFormTodo: todo = {
+    id: '',
+    isComplete: false,
+    content: '',
+  };
+
   constructor(
     private route: ActivatedRoute,
     private router: Router,
     private todoService: TodosService
   ) {}
 
-  id: string | null = this.route.snapshot.paramMap.get('id');
-
   ngOnInit(): void {
-    this.todo = this.todoService.getTodo(this.id);
+    this.todoService.getTodo(this.id).subscribe((data) => {
+      this.newFormTodo = data;
+    });
   }
 
   onFormSubmit(form: NgForm) {
     if (form.invalid) return alert('Content is Required');
-    this.todoService.updateTodo(this.id, form.value);
-    this.router.navigateByUrl('/todos');
+    this.todoService.updateTodo(this.id, this.newFormTodo).subscribe({
+      next: () => {
+        this.router.navigateByUrl('/todos');
+      },
+      error: (err) => {
+        console.log('Error Updating Todo', err);
+      },
+    });
   }
 }
