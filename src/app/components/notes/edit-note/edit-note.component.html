@@ -2,7 +2,7 @@
   <h2>Edit Note</h2>
   <form #form="ngForm" (ngSubmit)="onFormSubmit(form)">
     <input
-      [ngModel]="note?.title"
+      [(ngModel)]="newNoteForm.title"
       class="text-box"
       name="title"
       type="text"
@@ -10,7 +10,7 @@
       required
     />
     <textarea
-      [ngModel]="note?.content"
+      [(ngModel)]="newNoteForm.content"
       class="text-area"
       name="content"
       placeholder="Enter note here..."
