@@ -21,7 +21,7 @@ export class TodosComponent implements OnInit {
 
   toggleCompleted(todo: Todo) {
     todo.isComplete = !todo.isComplete;
-    this.todosService.updateTodo(todo.id, todo);
+    this.todosService.updateTodo(todo.id, todo).subscribe();
   }
 
   onDeletClicked(todo: Todo) {
