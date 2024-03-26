@@ -11,8 +11,8 @@
       "id": "15b43ec7-312c-4d29-8746-3dec837944fd"
     },
     {
-      "title": "Make sure to give me a start",
-      "content": "I put alot of effor in Learning and Developing my angular skills, So I guess for that reason I can get a star 🤩.",
+      "title": "Make sure to give me a star",
+      "content": "I put a lot of effort in Learning and Developing my angular skills, So I guess for that reason I can get a star 🤩.",
       "id": "d7fac163-4155-4e38-853d-2fb0287ed96a"
     }
   ],
@@ -28,9 +28,31 @@
       "isComplete": false
     },
     {
-      "content": "Enjoy Using this ...",
+      "content": "Enjoy Using ...",
       "id": "8fd0db09-3317-42f5-b9cb-378db3c3c418",
       "isComplete": false
+    }
+  ],
+  "bookmarks": [
+    {
+      "id": "my-uuid-1",
+      "name": "Wikipedia",
+      "url": "https://wikipedia.org"
+    },
+    {
+      "id": "my-uuid-2",
+      "name": "Google",
+      "url": "https://google.com"
+    },
+    {
+      "name": "Youtube",
+      "id": "a75ee901-71d4-40b0-9496-51358f898400",
+      "url": "https://www.youtube.com"
+    },
+    {
+      "name": "Creator",
+      "id": "59efa79e-d9ea-4b1b-b6db-7465367f24fc",
+      "url": "https://github.com/Poya-Faraji"
     }
   ]
 }
