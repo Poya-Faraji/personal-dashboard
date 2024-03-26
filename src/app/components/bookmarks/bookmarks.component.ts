@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { BookmarkService } from '../../shared/bookmark.service';
-import { Bookmark } from '../../shared/bookmark';
 import { bookmark } from '../../shared/bookmark.inteface';
 
 @Component({
