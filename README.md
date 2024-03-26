@@ -26,15 +26,15 @@ Prerequisites:
 
 3.  Install Angular CLI (globally):
 
-    npm install -g @angular/cli
+        npm install -g @angular/cli
 
 4.  Clone this repo:
 
-    git clone git@github.com:Poya-Faraji/personal-dashboard.git
+        git clone git@github.com:Poya-Faraji/personal-dashboard.git
 
 5.  Enter Project folder:
 
-    cd personal-dashboard
+        cd personal-dashboard
 
 6.  Install Packages
 
@@ -42,9 +42,11 @@ Prerequisites:
 
 7.  Run Angular using cli
 
-    ng serve --open
+        ng serve --open
 
 8.  Run this command but make sure you are in a right direcotory !
+
+        json-server --watch src/server/db.json --port 3000
 
 ![ng serve img](src/assets/ng%20serve.png)
 
