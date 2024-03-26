@@ -42,26 +42,22 @@ Prerequisites:
 
 7.  Run Angular using cli
 
-        ng serve --open
-
-8.  Run this command but make sure you are in a right direcotory !
-
-        json-server --watch src/server/db.json --port 3000
+            ng serve --open
 
 ![ng serve img](src/assets/ng%20serve.png)
 
-9.  In Brand new terminal run this command to run json-server
-    to be able to use local datababse make sure it is on port 3000
+8.  In Brand new terminal run this command to run json-server to be able to use local datababse make sure it is on port 3000
 
-            json-server -- wathc src/server/db.json --port 3000
+        json-server -- wathc src/server/db.json --port 3000
 
 ![json-server img](src/assets/json-server.png)
 
-Go to your browser and enjoy! 👌
+## Go to your browser and enjoy! 👌
 
 ![personal-dashboard img](src/assets/personal-dashboard.png)
 
 ### Dont forget to Give this repo a star ⭐
 
-You can reach out to me :
+### You can reach out to me :
+
 🟦 [Linkden](https://www.linkedin.com/in/poya-faraji/)
