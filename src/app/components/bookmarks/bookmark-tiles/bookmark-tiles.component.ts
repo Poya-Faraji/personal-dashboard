@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Bookmark } from '../../../shared/bookmark';
+import { bookmark } from '../../../shared/bookmark.inteface';
 
 @Component({
   selector: 'app-bookmark-tiles',
@@ -7,12 +7,13 @@ import { Bookmark } from '../../../shared/bookmark';
   styleUrl: './bookmark-tiles.component.scss',
 })
 export class BookmarkTilesComponent implements OnInit {
-  @Input() bookmark: Bookmark | null = null;
+  @Input() bookmark: bookmark | null = null;
   bookmarkFavIcon: string = '';
-
+  bookmarkURL?: URL;
   ngOnInit(): void {
     if (this.bookmark) {
-      this.bookmarkFavIcon = this.bookmark.url.origin + '/favicon.ico';
+      this.bookmarkURL = new URL(this.bookmark.url);
+      this.bookmarkFavIcon = this.bookmarkURL.origin + '/favicon.ico';
     }
   }
 }

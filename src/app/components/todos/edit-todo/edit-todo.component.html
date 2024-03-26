@@ -2,7 +2,7 @@
   <h2>Edit Todo</h2>
   <form #form="ngForm" (ngSubmit)="onFormSubmit(form)">
     <input
-      [ngModel]="todo?.content"
+      [(ngModel)]="newFormTodo.content"
       class="text-box"
       name="content"
       type="text"
