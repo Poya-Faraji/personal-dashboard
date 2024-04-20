@@ -48,7 +48,7 @@ Prerequisites:
 
 8.  In Brand new terminal run this command to run json-server to be able to use local datababse make sure it is on port 3000
 
-        json-server -- wathc src/server/db.json --port 3000
+        json-server -- watch src/server/db.json --port 3000
 
 ![json-server img](src/assets/json-server.png)
 
